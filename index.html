@@ -1,0 +1,226 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>X-3 | Oceanic</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:#050505;
+  color:#fff;
+  font-family:'Inter',sans-serif;
+}
+
+/* Header */
+header{
+  height:70vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  background:linear-gradient(to bottom,#000,transparent);
+}
+
+header h1{
+  font-family:'Playfair Display',serif;
+  font-size:3.5rem;
+  margin-bottom:20px;
+}
+
+header p{
+  color:#aaa;
+  max-width:600px;
+}
+
+/* Section */
+.section{
+  padding:120px 10%;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:50px;
+}
+
+.card{
+  padding:45px;
+  border:1px solid rgba(255,255,255,0.06);
+  background:rgba(255,255,255,0.02);
+  backdrop-filter:blur(10px);
+  transition:.6s ease;
+  opacity:0;
+  transform:translateY(60px);
+}
+
+.card.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.card:hover{
+  transform:translateY(-15px);
+  box-shadow:0 30px 80px rgba(255,255,255,0.05);
+}
+
+.card h3{
+  font-family:'Playfair Display',serif;
+  margin-bottom:15px;
+}
+
+.card p{
+  color:#aaa;
+  font-size:.95rem;
+}
+
+/* Footer */
+footer{
+  text-align:center;
+  padding:60px;
+  color:#666;
+  border-top:1px solid rgba(255,255,255,0.05);
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Welcome To</h1>
+  <h1>Kelas 10-3</h1>
+  <p>Terimakasih telah mengunjungi laman website kelas 10-3</p>
+</header>
+
+<section class="section">
+  <div class="grid">
+    <div class="card">
+      <h3>Asal Usul</h3>
+      <p>Kelas X-3 terbentuk pada 14 July tahun 2025 setelah PPDB.</p>
+    </div>
+    <div class="card">
+    <h3>Hierarki Kelas X-3</h3>
+    <p>Wali Kelas=Anggih Destriani</p>
+    <br></br>
+<p>Ketua Kelas= Sayyed Theo</p>
+<br></br>
+<p>Wakil Ketua= Varenz Albany</p>
+<br></br>
+<p>Bendahara= Alena Vika Indriani</p>
+<br></br>
+<P>Sekretaris= Biansha Tri Aryani</P>
+<br></br>
+    </div>
+    <div class="card">
+      <h3>Prestasi kelas X-3</h3>
+      <p>-Juara lomba CCQ sanlat 2026</p>
+    </div>
+    <div class="card">
+      <h3>Nama Nama Murid Kelas X-3</h3>
+      <p>1 ALENA VIKA INDRIANI
+<br></br>
+2 ALMADITA ARIZKIYA
+<br></br>
+3 ANDRIAN STEVEN TOBING
+<br></br>
+4 ANNISA TSAFITRI
+<br></br>
+5 ASEP SAEPUDIN
+<br></br>
+6 AZIRA OKTAVIA
+<br></br>
+7 BIANSHA TRI ARYANI
+<br></br>
+8 CANTIKA AFRILIA RIDWAN
+<br></br>
+9 CARISSA ASHA PERMANA
+
+<br></br>
+10 CHEISYA MUTI'AH RAMADHANI
+<br></br>
+
+11 CHERRY ALMOZZA
+<br></br>
+12 DALING ADITYA KALANI
+<br></br>
+13 DINARA EKA FITRIYANTI
+<br></br>
+14 DIRLY ALFHA RIZKY
+<br></br>
+15 ELSA APRILIANI
+<br></br>
+16 FERANIKSA FERNANDA
+<br></br>
+17 GALUH PUTRA YULIANTO
+<br></br>
+18 GERALDY MUHAMMAD AFZAL NURA
+<br></br>
+19 GHAISAN FAWAS ANDRADEANOV
+<br></br>
+20 INDAH NUR ADIRATNA DAMAYANTI
+<br></br>
+21 LIBI NURASIYAH
+<br></br>
+22 NAKEISHA NAURA SAKHI HERMAWA
+<br></br>
+23 NIZMA AULIA RAMADANI
+
+<br></br>
+
+24 RAFKA RIZKI RAHADIAN
+<br></br>
+25 RICO ARGYA PUTRA
+<br></br>
+26.RYNEZZA DINA NAURA
+<br></br>
+27 SAYYED TEO HANIF MUHAMMAD
+<br></br>
+28 SHALLUN ROSSELIENY FATIHAH
+<br></br>
+
+29 SUKMA BUNGA PUTRI LESTARI
+<br></br>
+30 SYAHLA BENTANG KIRANA
+<br></br>
+31 VARENZ AL BANY
+<br></br>
+32 VIOLA AULIA
+<br></br>
+33 WELVAN SYAFRIAL LUTHFY
+<br></br>
+34 ZADA PRATAMA
+<br></br>
+35 ZAHRA VALENTINA RIZKYADI
+<br></br>
+36 ZILDJIAN PRATAMA SURYAMAN
+  </div>
+</section>
+<footer>
+  © 2026 Kelas X-3
+  <br></br>
+  Proggramer=Identitas dirahasiakanl
+</footer>
+
+<script>
+const cards = document.querySelectorAll(".card");
+
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  });
+},{threshold:0.2});
+
+cards.forEach(card=>{
+  observer.observe(card);
+});
+</script>
+
+</body>
+</html>
